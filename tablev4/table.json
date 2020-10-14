@@ -12,7 +12,7 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-firetablev4",
-            "url": "https://github.tools.sap/I330150/FiresNearMe/blob/master/tablev4/table.js",
+            "url": "https://fredklatt.github.io/firesnearme/tablev4/table.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }

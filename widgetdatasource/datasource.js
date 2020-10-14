@@ -1,7 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-		<link rel="stylesheet" href="https://widgetdatasource.s3-ap-southeast-2.amazonaws.com/multiselect/multiselect.css"/>
+		<link rel="stylesheet" href="https://fredklatt.github.io/firesnearme/widgetdatasource/multiselect/multiselect.css"/>
         <style>
             .datasource {
                 width: 100%;
@@ -28,7 +28,7 @@
                 display: inline-block;
                 vertical-align: middle;
             }
-            
+
             .filters {
                 margin-left: auto;
                 position: relative;
@@ -76,7 +76,7 @@
             this._d3Props = {};
 
             this._d3Props.updateTimeFormatter = this._d3.timeFormat("%I:%M%p")
-            
+
             this._connected = false;
             this._props = {
                 JSONUrl: "",
@@ -87,7 +87,7 @@
             this.$div.querySelector('#refresh').onclick = (e) => this.refresh();
             this.$div.querySelector('#applyFilter').onclick = (e) => this.updateFilteredData();
         }
-        
+
         refresh() {
             if(this._props["JSONUrl"]) {
                 this.updateData(this._props["JSONUrl"])
@@ -109,7 +109,7 @@
 
                 let timestring = distance > 60000 ? Math.floor(distance / (1000 * 60)) + " Minutes" : Math.floor(distance / (1000)) + " Seconds";
 
-                this.$div.querySelector(".refresh-timer .value").innerText = timestring; 
+                this.$div.querySelector(".refresh-timer .value").innerText = timestring;
             }, 1000);
         }
 
@@ -196,7 +196,7 @@
                     exit => exit.remove()
                 );
 
-            
+
             let label = this._filters
                 .select(".filter-label")
                 .text(d => d.name.toLowerCase());
@@ -208,7 +208,7 @@
                 .join("option")
                 .attr("value", d => d)
                 .text(d => d);
-            
+
             this._filters.select(".filter-select").each((d, i, node) => {
                 $(node[i]).multiselect();
 
@@ -239,7 +239,7 @@
         getRawData() {
             return this._rawData || {};
         }
-        
+
         getFilteredData() {
             return this._filteredData || this.getRawData();
         }
@@ -252,7 +252,7 @@
                 let descriptionItems = descriptionString.split("<br />");
 
                 descriptionItems.forEach((item) => {
-                    let splitPoint = item.indexOf(':'); 
+                    let splitPoint = item.indexOf(':');
                     var key = item.slice(0, splitPoint).trim();
                     var value = item.slice(splitPoint + 1).trim();
 
@@ -288,7 +288,7 @@
         disconnectedCallback(){
 
         }
-        
+
          //When the custom widget is updated, the Custom Widget SDK framework executes this function first
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
             let oldUrl = this._props['JSONUrl'];
@@ -348,7 +348,7 @@
 			document.head.appendChild(script);
 		}
     };
-    
+
     function loadScripts(srcArray, callback) {
         let loading = srcArray.length;
 
@@ -363,5 +363,5 @@
 
 	//END SHARED FUNCTION
 
-	loadScripts(["https://widgetdatasource.s3-ap-southeast-2.amazonaws.com/d3/d3v5.js","https://widgetdatasource.s3-ap-southeast-2.amazonaws.com/multiselect/multiselect.min.js"], () => customElements.define('com-sap-widget-datasource', WidgetDataSource));
+	loadScripts(["https://fredklatt.github.io/firesnearme/widgetdatasource/d3/d3v5.js","https://fredklatt.github.io/firesnearme/widgetdatasource/multiselect/multiselect.min.js"], () => customElements.define('com-sap-widget-datasource', WidgetDataSource));
 })();

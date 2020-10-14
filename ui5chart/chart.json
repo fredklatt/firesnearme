@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-demo-ui5-chart",
-			"url": "https://ui5chart.s3-ap-southeast-2.amazonaws.com/chart.js",
+			"url": "https://fredklatt.github.io/firesnearme/ui5chart/chart.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}

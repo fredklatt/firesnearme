@@ -13,14 +13,14 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-measuretile",
-            "url": "https://measuretile.s3-ap-southeast-2.amazonaws.com/tile.js",
+            "url": "https://fredklatt.github.io/firesnearme/measuretile/tile.js",
             "integrity": "",
             "ignoreIntegrity" : true
         },
         {
             "kind": "builder",
             "tag": "com-demo-measuretile-builder",
-            "url": "https://measuretile.s3-ap-southeast-2.amazonaws.com/builder.js",
+            "url": "https://fredklatt.github.io/firesnearme/measuretile/builder.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
@@ -92,7 +92,7 @@
 					"type": "string",
 					"description": "COUNT, COUNT DISTINCT, SUM"
 				}
-            ]  
+            ]
         },
 		"setValue": {
 			"description": "Sets the values for design of Tile.",

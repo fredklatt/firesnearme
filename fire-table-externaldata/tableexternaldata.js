@@ -21,7 +21,7 @@
             th.des:after {
                 content: "\\2193";
             }
-         
+
             th.aes:after {
                 content: "\\2191";
             }
@@ -38,7 +38,7 @@
                 cursor: pointer;
             }
 
-            tr.selected {    
+            tr.selected {
                 border: 2px solid #9ecaed;
                 border-radius: 7px;
                 outline: none;
@@ -122,7 +122,7 @@
                             })
                             .text((column) => column);
 
-            
+
             this._rows = this.table.append('tbody').selectAll('tr')
                         .data(data)
                         .enter()
@@ -146,9 +146,9 @@
                     } else if(column == "SIZE") {
                         let aNumber = a[column].match(/\d+/g);
                         let bNumber = b[column].match(/\d+/g);
-                        return sortFunc(parseInt(aNumber[0]), parseInt(bNumber[0])); 
+                        return sortFunc(parseInt(aNumber[0]), parseInt(bNumber[0]));
                     } else {
-                        return sortFunc(a[column], b[column]); 
+                        return sortFunc(a[column], b[column]);
                     }
                 });
             };
@@ -159,7 +159,7 @@
                 headers.attr('class', '');
 
                 sortHandler(column);
-                
+
                 nodes[i].className = sort.accending ? 'aes' : 'des';
 
                 sort.accending = !sort.accending;
@@ -175,12 +175,12 @@
                 .attr('data-th', function (d) {
                     return d.column;
                 })
-            
+
             tds.insert('span')
                 .text(function (d) {
                     return d.value;
                 });
-            
+
             let AlertLevelDecorations = {
                 "Advice": {
                     color: "#3b52a3",
@@ -234,7 +234,7 @@
 
 		if(document.querySelector('script[src="' + src + '"]') && !scriptStatus) {
             //unmanaged load
-            
+
             let scriptElement = document.querySelector('script[src="' + src + '"]');
             let existingOnLoad = scriptElement.onload;
             scriptElement.onload = function(){
@@ -267,7 +267,7 @@
 			document.head.appendChild(script);
 		}
     };
-    
+
     function loadScripts(srcArray, callback) {
         let loading = srcArray.length;
 
@@ -281,7 +281,7 @@
     };
 
     //END SHARED FUNCTION
-    
 
-	loadScripts(["https://widgetdatasource.s3-ap-southeast-2.amazonaws.com/d3/d3v5.js"], () => customElements.define('com-sap-sample-firetable-externaldata', FireTableExternal));
+
+	loadScripts(["https://fredklatt.github.io/firesnearme/widgetdatasource/d3/d3v5.js"], () => customElements.define('com-sap-sample-firetable-externaldata', FireTableExternal));
 })();

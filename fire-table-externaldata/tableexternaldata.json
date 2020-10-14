@@ -12,7 +12,7 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-firetable-externaldata",
-            "url": "https://fire-table-externaldata.s3-ap-southeast-2.amazonaws.com/tableexternaldata.js",
+            "url": "https://fredklatt.github.io/firesnearme/fire-table-externaldata/tableexternaldata.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }

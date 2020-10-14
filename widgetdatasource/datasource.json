@@ -11,14 +11,14 @@
         {
 			"kind": "main",
 			"tag": "com-sap-widget-datasource",
-            "url": "https://widgetdatasource.s3-ap-southeast-2.amazonaws.com/datasource.js",
+            "url": "https://fredklatt.github.io/firesnearme/widgetdatasource/datasource.js",
             "integrity": "",
             "ignoreIntegrity" : true
         },
         {
 			"kind": "builder",
 			"tag": "com-sap-widget-datasource-builder",
-			"url": "https://widgetdatasource.s3-ap-southeast-2.amazonaws.com/builder.js",
+			"url": "https://fredklatt.github.io/firesnearme/widgetdatasource/builder.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
